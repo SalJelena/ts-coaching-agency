@@ -1,0 +1,39 @@
+.header {
+    background-color: $grey;
+    
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    &__logo {
+        max-width: 120px;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+}
+
+.nav {
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        padding: 0 10px;
+    }
+
+    &__link {
+        font-family: $font-default;
+        color: $title-color;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+}

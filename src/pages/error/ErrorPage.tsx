@@ -1,8 +1,14 @@
+import Footer from "../../components/shared/footer/Footer";
+import Header from "../../components/shared/header/Header";
 
 
 function ErrorPage() {
   return (
-    <div>ErrorPage</div>
+    <>
+      <Header />
+      <div>ErrorPage</div>
+      <Footer />
+    </>
   )
 }
 

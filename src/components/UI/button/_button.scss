@@ -37,9 +37,7 @@ button {
 }
 
 .button--secondary {
-  background-color: $blue-dark2;
   color: $white;
-  border-color: $blue-dark2;
 
   &:hover {
     background: #215D72;
@@ -67,7 +65,6 @@ button {
     border-radius: 22px;
     top: 0;
     left: 0;
-    background-color: $main-color;
     transition: all 0.3s ease-out 0s;
     z-index: -1;
   }
@@ -83,11 +80,10 @@ button {
 
 .button--primary {
   color: $white;
-  background: linear-gradient(180deg, $main-color-mix 0%, $main-color 100%);
 
 
   &:hover {
-    background: linear-gradient(180deg, $main-color-mix2 0%, $main-color-mix 100%);
+
     box-shadow: 0px 8px 10px rgba(121, 99, 104, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12);
   }
 }
@@ -99,8 +95,5 @@ button {
   padding: 0 30px;
   color: $white;
 
-  &:hover {
-    border-color: $main-color;
-    color: $main-color;
-  }
+
 }
