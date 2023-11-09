@@ -7,9 +7,17 @@ function Header() {
 
   const [cartIsVisible, setCartIsVisible] = useState(false)
 
+  function handleCartOpen() {
+    setCartIsVisible(true)
+  }
+
+  function handleCartClose() {
+    setCartIsVisible(false)
+  }
+
   return (
     <>
-      {cartIsVisible && <Cart />}
+      {cartIsVisible && <Cart onDone={handleCartClose} />}
       <header className="header">
         <div className="wrap">
           <div className="header__inner">
@@ -30,7 +38,7 @@ function Header() {
               </ul>
             </nav>
             <div className="header__cart">
-              <button type="button" className="button">Cart (0)</button>
+              <button type="button" className="button" onClick={handleCartOpen}>Cart (0)</button>
             </div>
           </div>
         </div>
