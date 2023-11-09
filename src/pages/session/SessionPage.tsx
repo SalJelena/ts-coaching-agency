@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 
-import { SESSIONS } from '../dummy-sessions.ts';
+import { SESSIONS } from '../../dummy-sessions.ts';
 
 export default function SessionPage() {
   const params = useParams<{ id: string }>();
