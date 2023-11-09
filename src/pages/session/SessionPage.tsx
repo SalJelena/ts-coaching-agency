@@ -21,10 +21,10 @@ export default function SessionPage() {
     <main id="session-page">
       <article>
         <header>
-          <img
+          {/* <img
             src={loadedSession.image}
             alt={loadedSession.title}
-          />
+          /> */}
           <div>
             <h2>{loadedSession.title}</h2>
             <time dateTime={new Date(loadedSession.date).toISOString()}>
