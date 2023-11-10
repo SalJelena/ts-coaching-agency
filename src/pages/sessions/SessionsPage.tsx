@@ -1,11 +1,14 @@
+import Card from "../../components/UI/card/Card";
+import List from "../../components/UI/list/List";
 import useSessions from "../../hooks/useSessions";
+import ErrorPage from "../error/ErrorPage";
 
 export default function SessionsPage() {
-  const { data, error } = useSessions()
-  console.log(data);
+  const { data, isLoading, error } = useSessions()
   
-  if (error) return <p>{error.message}</p>
-  
+  if (error) return <ErrorPage />
+
+  if (isLoading) return <p>Loading...</p>
   
   return (
     <main id="sessions-page">
@@ -17,9 +20,7 @@ export default function SessionsPage() {
           you!
         </p>
       </header>
-      <ul>
-        {data?.map(session => <li key={session.id}>{session.title}</li>)}
-      </ul>
+      {data && <List items={data} renderItem={(session) => <Card key={session.id} el={session} />} />}
     </main>
   );
 }
