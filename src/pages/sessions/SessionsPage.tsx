@@ -2,6 +2,7 @@ import useSessions from "../../hooks/useSessions";
 
 export default function SessionsPage() {
   const { data, error } = useSessions()
+  console.log(data);
   
   if (error) return <p>{error.message}</p>
   
