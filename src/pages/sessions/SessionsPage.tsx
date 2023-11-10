@@ -1,6 +1,11 @@
-// import { SESSIONS } from '../../dummy-sessions.ts'; // normally, we would probably load that from a server
+import useSessions from "../../hooks/useSessions";
 
 export default function SessionsPage() {
+  const { data, error } = useSessions()
+  
+  if (error) return <p>{error.message}</p>
+  
+  
   return (
     <main id="sessions-page">
       <header>
@@ -11,7 +16,9 @@ export default function SessionsPage() {
           you!
         </p>
       </header>
-      {/* Todo: Output list of sessions */}
+      <ul>
+        {data?.map(session => <li key={session.id}>{session.title}</li>)}
+      </ul>
     </main>
   );
 }
