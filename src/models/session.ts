@@ -4,7 +4,7 @@ export type Session = {
     summary: string;
     description: string;
     duration: number;
-    date: Date;
+    date: string;
     price: number;
     image: string;
   }
