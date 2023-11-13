@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react"
 import Modal, { ModalHandle } from "../../UI/modal/Modal"
+import CartItems from "./CartItems";
 
 type CartProps = {
     onDone: () => void;
@@ -17,6 +18,7 @@ function Cart({ onDone }: CartProps) {
     return (
         <Modal ref={modal} onClose={onDone}>
             <h2>Your Cart</h2>
+            <CartItems />
             <button onClick={onDone}>Close</button>
         </Modal>
     )

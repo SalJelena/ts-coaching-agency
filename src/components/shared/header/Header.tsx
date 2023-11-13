@@ -2,10 +2,15 @@ import { NavLink } from "react-router-dom"
 import logoImg from "../../../assets/images/logo.png"
 import { useState } from "react"
 import Cart from "../../layout/cart/Cart"
+import { useAppSelector } from "../../../store/hooks"
 
 function Header() {
 
   const [cartIsVisible, setCartIsVisible] = useState(false)
+  const items = useAppSelector((state) => state.cart.items)
+
+  const cartQuantityNumber = items.length
+  
 
   function handleCartOpen() {
     setCartIsVisible(true)
@@ -38,7 +43,7 @@ function Header() {
               </ul>
             </nav>
             <div className="header__cart">
-              <button type="button" className="button" onClick={handleCartOpen}>Cart (0)</button>
+              <button type="button" className="button" onClick={handleCartOpen}>Cart {cartQuantityNumber}</button>
             </div>
           </div>
         </div>
