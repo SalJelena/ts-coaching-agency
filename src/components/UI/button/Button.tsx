@@ -2,12 +2,10 @@ import { ComponentPropsWithoutRef } from "react";
 
 type ButtonProps = {
   el: 'button';
-  disabled: boolean;
 } & ComponentPropsWithoutRef<'button'>
 
 type LinkProps = {
   el: 'link';
-  disabled: boolean;
 } & ComponentPropsWithoutRef<'a'>
 
 function Button(props: ButtonProps | LinkProps) {
@@ -19,7 +17,7 @@ function Button(props: ButtonProps | LinkProps) {
   }
 
   return (
-    <button {...props} className={props.disabled ? `button` : `button button--disabled`}></button>
+    <button {...props} className="button"></button>
   )
 }
 

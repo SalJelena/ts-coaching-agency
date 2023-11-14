@@ -16,9 +16,9 @@ function CartItems() {
             {cartItems.length > 0 && (
                 <>
                     {cartItems.map((item) => {
-                        return <div>
+                        return <div key={item.id}>
                             <h3>{item.title}</h3>
-                            <Button el='button' onClick={() => handleRemoveFromCart(item.id)}>Remove</Button>
+                            <Button el='button' disabled={false} onClick={() => handleRemoveFromCart(item.id)}>Remove</Button>
                         </div>
                     })}
                 </>
